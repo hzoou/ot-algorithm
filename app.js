@@ -3,12 +3,12 @@ const { inclusionTransform, merge } = require("./otAlgorithm");
 
 const origin = `hello`;
 
-const user1 = "helblo";
+const user1 = "helo";
 const parsed1 = opParser(origin, user1);
 const operation1 = parsed1.getOperation();
 operation1.unshift({ operator: "asdf", value: 123 });
 
-const user2 = "hello";
+const user2 = "helloB";
 const parsed2 = opParser(origin, user2);
 const operation2 = parsed2.getOperation();
 operation2.unshift({ operator: "asdf", value: 124 });
