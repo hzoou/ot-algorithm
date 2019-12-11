@@ -22,7 +22,7 @@ function inclusionTransform(o1, o2 = o0) {
     switch (operation.operator) {
       case "retain":
         sum += operation.value;
-        // offset += operation.value;
+        // offset -= operation.value;
         break;
       case "delete":
         sum += operation.value;
@@ -30,12 +30,12 @@ function inclusionTransform(o1, o2 = o0) {
         break;
       case "insert":
         sum += operation.value.length;
-        offset += operation.value.length;
+        // offset += operation.value.length;
         break;
     }
-    o1[0].value += offset;
-    return o1;
   }
+  o1[0].value += offset;
+  return o1;
 }
 function merge(operations, str) {
   let start = 0,
